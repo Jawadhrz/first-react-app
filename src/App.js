@@ -2,22 +2,37 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const firstName = 'Jawad';
+  const lastName = 'Haider';
+  const age = 22;
+  const job = 'Web Programmer';
+
+  const mArr = [1,2,3,4,5];
+
+  const mObj = {
+    name: 'jawad',
+    age: 21
+  }
+
+  const inputPlaceholder = 'Enter Your Details'
+
+  const getFullName = (firstName,lastName) => `${firstName} ${lastName}`
+
+  const detailsInputBox = <input placeholder={inputPlaceholder} autoComplete />;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>Full Name: {getFullName(firstName,lastName)}</h3>
+      <p>Age: {mObj.age}</p>
+      <p>Job: {job}</p>
+
+      {mArr[2]}
+
+      {
+        mArr[2] > 0 ? "Ture" : "False"
+      }
+      
+      {detailsInputBox}
     </div>
   );
 }
