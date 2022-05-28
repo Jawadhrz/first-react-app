@@ -1,7 +1,9 @@
 import React from "react";
 
+import { dumpLogs } from "./Utils"; 
+
 const BLogCard = (props) => {
-    console.log(props);
+    dumpLogs(props);
 
     return(
         <div className="BlogCard">

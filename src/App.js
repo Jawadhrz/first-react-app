@@ -1,5 +1,6 @@
 import React from 'react';
 import BLogCard  from './BlogCard';
+import { isArrayEmpty } from './Utils';
 import './App.css';
  
 function App() {
@@ -21,8 +22,7 @@ function App() {
     }
   ] 
 
-  const blogCards = blogArr.map((item, pos) => {
-    console.log(item);
+  const blogCards = isArrayEmpty(blogArr) ? [] : blogArr.map((item, pos) => {
      return (
        <BLogCard key={pos} title={item.title} description={item.description} id={item.id}/>
       //  <div className="BlogCard" key={item.id}>
